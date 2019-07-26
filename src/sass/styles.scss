@@ -1,0 +1,198 @@
+@charset "utf-8";
+@import '../../node_modules/bulma/bulma.sass';
+@import './font.scss';
+
+$primary: rgb(155, 154, 133);
+$secondary: #99ccff;
+
+// General layout
+
+html {
+  scroll-behavior: smooth;
+}
+
+#loading {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #ddd;
+}
+
+// Hero
+
+#top {
+  margin-bottom: 0px;
+}
+
+.header {
+  background-color: rgb(155, 154, 133);
+}
+
+.title-brand {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
+    'AppleGothic', sans-serif;
+  font-size: 50px;
+  padding: 2px 5px;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  background-color: $secondary;
+  position: absolute;
+  z-index: 4;
+  opacity: 0.9;
+  color: white;
+  letter-spacing: 0.15em;
+}
+
+#bandeau1 {
+  opacity: 0.8;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1000px) {
+  #bandeau1 {
+    width: 109%;
+    max-width: 109%;
+  }
+}
+
+.quote {
+  font-family: 'Caveat', cursive;
+  font-size: 40px;
+}
+
+// Navbar
+
+#brand {
+  font-family: 'Raleway';
+  letter-spacing: 4px;
+}
+
+section {
+  color: 'white';
+  font-family: Raleway;
+}
+
+.navbar-item {
+  color: white;
+}
+
+.navbar {
+  height: 50px;
+}
+
+.navbar-menu.is-active {
+  background-color: $secondary;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.sticky + body {
+  padding-top: 102px;
+}
+
+.navbar {
+  // position: absolute !important;
+  background-color: #5e8cbf !important;
+}
+
+.navbar-item {
+  font-size: 20px;
+}
+
+// Sections
+
+#containerCarnets {
+  position: relative;
+  & a {
+    font-weight: 900;
+    color: #3b496b;
+    font-size: 21px;
+  }
+}
+
+#nusFeminins {
+  font-size: 20px;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+}
+
+#visages {
+  font-size: 20px;
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+}
+
+#paysages {
+  font-size: 20px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+}
+
+#nusMasculins {
+  font-size: 20px;
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+}
+
+#videoAquarelles {
+  font-size: 20px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+}
+
+.slideshows {
+  display: none;
+}
+
+#autres {
+  box-shadow: 2px 2px 5px #9b9a85;
+}
+
+#carnets {
+  box-shadow: 2px 2px 5px #9b9a85;
+  background-color: #c7c8ca;
+}
+
+#a-propos {
+  box-shadow: 2px 2px 5px #9b9a85;
+}
+
+.section-title {
+  padding: 10px;
+  display: inline;
+  font-family: 'Raleway';
+  color: white;
+}
+
+.navbar-item {
+  font-size: 20px;
+}
+
+a.active {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.presentation {
+  color: white;
+}

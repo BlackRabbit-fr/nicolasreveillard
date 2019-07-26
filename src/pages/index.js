@@ -3,33 +3,24 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
+import Papiers from '../components/papiers'
+import Huiles from '../components/huiles'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import '../css/mystyles.css'
 
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    const [bandeau] = get(this, 'props.data.allContentfulBandeau.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
-      <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <Hero data={author.node} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-        </div>
+      <Layout location={this.props.location}>
+        <Helmet title={siteTitle} />
+        <Hero data={bandeau.node} />
+        <Papiers />
+        <Huiles />
       </Layout>
     )
   }
@@ -44,27 +35,24 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBandeau(sort: { fields: bandeau1___file___fileName }) {
       edges {
         node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-             ...GatsbyContentfulFluid_tracedSVG
+          bandeau1 {
+            fluid(resizingBehavior: SCALE, maxWidth: 785, maxHeight: 688) {
+              ...GatsbyContentfulFluid_tracedSVG
+              aspectRatio
             }
+            title
           }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
+          citation
+          titreDuSite
         }
       }
     }
-    allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
+    allContentfulPerson(
+      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
+    ) {
       edges {
         node {
           name
