@@ -105,7 +105,7 @@ export default () => {
           className="title is-1 has-text-centered"
           style={{ marginBottom: '8rem' }}
         >
-          Oeuvres sur papier
+          Oeuvres sur papier test
         </h1>
         <div className="columns is-desktop">
           <div className="column has-text-centered">
