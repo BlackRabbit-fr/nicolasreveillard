@@ -2,7 +2,6 @@ import React from 'react'
 import Img from 'gatsby-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import '@fortawesome/fontawesome-free/css/all.min.css'
-import PropTypes from 'prop-types'
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -82,7 +81,7 @@ export default () => {
             id="brand"
             href="#top"
           >
-            Nicolas Réveillard test
+            Nicolas Réveillard
           </a>
           <a
             role="button"
@@ -106,8 +105,4 @@ export default () => {
       </nav>
     </div>
   )
-}
-
-Hero.PropTypes = {
-  children: PropTypes.element.isRequired,
 }
