@@ -5,7 +5,8 @@ import Carousel, { Modal, ModalGateway } from 'react-images'
 
 export default () => {
   const [modal, setModal] = useState(-1)
-  const toggleModal = index => {
+  const toggleModal = (e, index) => {
+    e.preventDefault()
     if (index) setModal(index)
     else setModal(-1)
   }
@@ -16,7 +17,7 @@ export default () => {
         edges {
           node {
             huiles {
-              fluid(resizingBehavior: SCALE, maxHeight: 500) {
+              fluid(resizingBehavior: SCALE) {
                 ...GatsbyContentfulFluid_tracedSVG
                 aspectRatio
               }
@@ -35,9 +36,7 @@ export default () => {
   var huiles = []
   {
     edges.node.huiles.map(i => {
-      var img = {}
-      img.src = 'http:' + i.file.url
-      huiles.push(img)
+      huiles.push(i.fluid)
     })
   }
 
@@ -51,9 +50,9 @@ export default () => {
         <h1 className="title is-1 has-text-centered">Huiles sur toile</h1>
         <div className="columns is-multiline is-centered is-vcentered">
           {edges.node.huiles.map((img, index) => (
-            <div className="column " key={index}>
-              <a onClick={() => toggleModal(index)}>
-                <Img fluid={img.fluid} />
+            <div className="column is-2" key={index}>
+              <a onClick={e => toggleModal(e, index)}>
+                <Img fluid={img.fluid} alt={img.title} />
               </a>
             </div>
           ))}
@@ -61,8 +60,16 @@ export default () => {
       </section>
       <ModalGateway>
         {modal > -1 ? (
-          <Modal onClose={toggleModal}>
-            <Carousel currentIndex={modal} views={huiles} isFullScreen={true} />
+          <Modal
+            onClose={toggleModal}
+            styles={{
+              blanket: base => ({
+                ...base,
+                backgroundColor: 'black',
+              }),
+            }}
+          >
+            <Carousel currentIndex={modal} views={huiles} />
           </Modal>
         ) : null}
       </ModalGateway>

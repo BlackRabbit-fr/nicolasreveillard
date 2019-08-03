@@ -6954,7 +6954,7 @@ label.panel-block {
 
 .footer {
   background-color: #fafafa;
-  padding: 3rem 1.5rem 6rem; }
+  padding: 0rem 0.5rem 2rem; }
 
 /* latin */
 @font-face {
@@ -6983,7 +6983,9 @@ label.panel-block {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-x: unset;
+  overflow-y: unset; }
 
 #loading {
   position: absolute;
@@ -6995,15 +6997,14 @@ html {
   margin-bottom: 0px; }
 
 .header {
-  background-color: #9b9a85; }
+  background-color: #c7c8ca; }
 
 .title-brand {
   font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif;
   font-size: 50px;
-  padding: 2px 5px;
   text-align: center;
   text-rendering: optimizeLegibility;
-  background-color: #99ccff;
+  background-color: #c8bfb2;
   position: absolute;
   z-index: 4;
   opacity: 0.9;
@@ -7011,13 +7012,20 @@ html {
   letter-spacing: 0.15em; }
 
 #bandeau1 {
-  opacity: 0.8;
+  opacity: 0.7;
   z-index: 1; }
 
-@media screen and (min-width: 1000px) {
-  #bandeau1 {
+@media screen and (max-width: 1024px) {
+  .bandeau1 {
+    width: 100%;
+    height: 109%; }
+  .title-brand {
+    margin-top: -2.5rem; } }
+
+@media screen and (min-width: 1024px) {
+  .bandeau1 {
     width: 109%;
-    max-width: 109%; } }
+    height: 100%; } }
 
 .quote {
   font-family: 'Caveat', cursive;
@@ -7038,7 +7046,7 @@ section {
   height: 50px; }
 
 .navbar-menu.is-active {
-  background-color: #99ccff; }
+  background-color: #c7c8ca; }
 
 .sticky {
   position: fixed !important;
@@ -7050,7 +7058,8 @@ section {
   padding-top: 102px; }
 
 .navbar {
-  background-color: #5e8cbf !important; }
+  z-index: 1;
+  background-color: #5e8bbf00 !important; }
 
 .navbar-item {
   font-size: 20px; }
@@ -7065,7 +7074,7 @@ section {
 #nusFeminins {
   font-size: 20px;
   position: absolute;
-  top: 48%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content; }
@@ -7073,7 +7082,7 @@ section {
 #visages {
   font-size: 20px;
   position: absolute;
-  top: 61%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content; }
@@ -7081,7 +7090,7 @@ section {
 #paysages {
   font-size: 20px;
   position: absolute;
-  top: 75%;
+  top: 66%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content; }
@@ -7089,7 +7098,7 @@ section {
 #nusMasculins {
   font-size: 20px;
   position: absolute;
-  top: 79%;
+  top: 76%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content; }
@@ -7097,7 +7106,7 @@ section {
 #videoAquarelles {
   font-size: 20px;
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content; }
@@ -7109,7 +7118,6 @@ section {
   box-shadow: 2px 2px 5px #9b9a85; }
 
 #carnets {
-  box-shadow: 2px 2px 5px #9b9a85;
   background-color: #c7c8ca; }
 
 #a-propos {

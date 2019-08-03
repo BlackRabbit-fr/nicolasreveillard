@@ -1,11 +1,15 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
+  "name": "Nicolas Reveillard",
+  "description": "Artiste peintre originaire de la Drôme.",
   "keywords": [
-    "contentful",
-    "gatsby",
-    "static",
-    "ssg"
+    "nicolas",
+    "reveillard",
+    "aquarelle",
+    "encre",
+    "huile",
+    "paysages",
+    "drome",
+    "nature"
   ],
   "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
   "success_url": "/",
