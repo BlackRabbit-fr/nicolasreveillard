@@ -45,7 +45,7 @@ export default () => {
       <section
         className="section is-small isSection"
         id="autres"
-        style={{ backgroundColor: '#c8bfb2' }}
+        style={{ backgroundColor: '#c8bfb2', marginTop: '10px' }}
       >
         <h1 className="title is-1 has-text-centered">Huiles sur toile</h1>
         <div className="columns is-multiline is-centered is-vcentered">
@@ -66,6 +66,7 @@ export default () => {
               blanket: base => ({
                 ...base,
                 backgroundColor: 'black',
+                transition: 'opacity 1000ms',
               }),
             }}
           >
