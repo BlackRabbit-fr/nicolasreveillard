@@ -66,7 +66,6 @@ export default () => {
               blanket: base => ({
                 ...base,
                 backgroundColor: 'black',
-                transition: 'opacity 1000ms',
               }),
             }}
           >
