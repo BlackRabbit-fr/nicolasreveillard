@@ -3,9 +3,20 @@ import React from 'react'
 export default function footer() {
   return (
     <div>
-      <footer className="footer has-background-dark is-vcentered">
+      <footer className="footer has-background-dark has-text-centered is-vcentered">
         <div className="content has-text-centered has-text-white">
-          <i class="fas fa-envelope"></i>
+          <span>
+            <i className="fas fa-envelope"></i>
+            {'   '}
+            <a href="mailto:nicolas.reveillard@laposte.net">
+              nicolas.reveillard@laposte.net
+            </a>{' '}
+          </span>
+          <br></br>
+          <br></br>
+          <span>
+            Copyright © 2019 - Made by <a href="https://trvd.fr">Théo</a>
+          </span>
         </div>
       </footer>
     </div>

@@ -6,7 +6,7 @@ import { useSpring, animated } from 'react-spring'
 import { Spring } from 'react-spring/renderprops'
 import VisibilitySensor from 'react-visibility-sensor'
 
-// Animate the Collage
+// Function for the Collage animation
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 20,
   (x - window.innerWidth / 1.2) / 10,
@@ -24,6 +24,7 @@ export default () => {
     else setModal([])
   }
 
+  // Collage animation
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 40 },
@@ -96,6 +97,7 @@ export default () => {
   `)
   const [edges] = data.allContentfulOeuvresSurPapier.edges
 
+  // For populating the modal
   var paysages = []
   {
     edges.node.paysages.map(i => {
@@ -118,18 +120,13 @@ export default () => {
   }
   return (
     <div>
-      <section
-        className="section is-small isSection"
-        id="carnets"
-        style={{ marginTop: '10px' }}
-      >
+      <section className="section is-small isSection" id="carnets">
         <VisibilitySensor partialVisibility>
           {({ isVisible }) => (
             <Spring
               delay={300}
               to={{
                 opacity: isVisible ? 1 : 0,
-                //transform: isVisible ? 'translateX(0)' : 'translateX(200px)',
               }}
             >
               {props => (
@@ -149,7 +146,6 @@ export default () => {
               delay={300}
               to={{
                 opacity: isVisible ? 1 : 0,
-                //transform: isVisible ? 'translateX(0)' : 'translateX(200px)',
               }}
             >
               {pps => (

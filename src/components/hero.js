@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import { useSpring, animated } from 'react-spring'
 import { Spring } from 'react-spring/renderprops'
+import signature from '../images/signature.svg'
 
 export default () => {
   // Make the arrowdown and the navbar disapear
@@ -30,7 +31,7 @@ export default () => {
         document.documentElement.scrollTop + window.innerHeight >
         document.documentElement.offsetHeight - 1
       if (bottomOfWindow) {
-        setnavFade({ opacity: 1 })
+        if (screen.width > 1024) setnavFade({ opacity: 1 })
       }
     }
 
@@ -110,11 +111,41 @@ export default () => {
           </div>
         </div>
         <div className="hero-body is-block has-text-centered is-paddingless">
-          <blockquote>
-            <h1 className="title has-text-white quote">
-              {edges.node.citation}
-            </h1>
-          </blockquote>
+          <Spring
+            config={{ duration: 4000 }}
+            to={{ opacity: 0.8 }}
+            from={{ opacity: 0 }}
+          >
+            {props => (
+              <div style={props}>
+                <blockquote>
+                  <h1 className="title has-text-white quote">
+                    {edges.node.citation}
+                  </h1>
+                </blockquote>
+              </div>
+            )}
+          </Spring>
+          <Spring
+            config={{ duration: 4000 }}
+            to={{ opacity: 0.8 }}
+            from={{ opacity: 0 }}
+          >
+            {props => (
+              <div className="is-pulled-right" style={props}>
+                <img
+                  alt="signature"
+                  src={signature}
+                  style={{
+                    width: '170px',
+                    height: 'auto',
+                    opacity: '0.8',
+                    paddingRight: '10px',
+                  }}
+                />
+              </div>
+            )}
+          </Spring>
         </div>
         <animated.div style={props}>
           <div className="hero-footer has-text-centered ">
