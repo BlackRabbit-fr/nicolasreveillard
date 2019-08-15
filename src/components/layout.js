@@ -1,8 +1,4 @@
 import React from 'react'
-// import { Link } from 'gatsby'
-// import base from './base.css'
-// import Navigation from './navigation'
-
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
@@ -13,12 +9,7 @@ class Template extends React.Component {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
-    return (
-      <div>
-        {/* <Navigation /> */}
-        {children}
-      </div>
-    )
+    return <div>{children}</div>
   }
 }
 

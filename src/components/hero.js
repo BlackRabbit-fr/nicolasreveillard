@@ -7,23 +7,23 @@ import { Spring } from 'react-spring/renderprops'
 import signature from '../images/signature.svg'
 
 export default () => {
-  // Make the arrowdown and the navbar disapear
-  const [props, set] = useSpring(() => ({ opacity: 1 }))
-  const [navFade, setnavFade] = useSpring(() => ({ opacity: 1 }))
+  // Make the arrowdown and the navbar disapear on scroll
+  const [fadeIn, setFadeIn] = useSpring(() => ({ opacity: 1 }))
+  const [navFade, setNavFade] = useSpring(() => ({ opacity: 1 }))
 
   useEffect(() => {
     var prevScrollpos = window.pageYOffset
     const navOnScroll = () => {
       if (window.scrollY > 100) {
-        set({ opacity: 0 })
+        setFadeIn({ opacity: 0 })
       } else {
-        set({ opacity: 1 })
+        setFadeIn({ opacity: 1 })
       }
       var currentScrollPos = window.pageYOffset
       if (prevScrollpos > currentScrollPos) {
-        setnavFade({ opacity: 1 })
+        setNavFade({ opacity: 1 })
       } else {
-        setnavFade({ opacity: 0 })
+        setNavFade({ opacity: 0 })
       }
       prevScrollpos = currentScrollPos
 
@@ -31,7 +31,7 @@ export default () => {
         document.documentElement.scrollTop + window.innerHeight >
         document.documentElement.offsetHeight - 1
       if (bottomOfWindow) {
-        if (screen.width > 1024) setnavFade({ opacity: 1 })
+        if (screen.width > 1024) setNavFade({ opacity: 1 })
       }
     }
 
@@ -77,8 +77,8 @@ export default () => {
                 to={{ opacity: 0.8 }}
                 from={{ opacity: 0 }}
               >
-                {props => (
-                  <div style={props}>
+                {fadeIn => (
+                  <div style={fadeIn}>
                     <Img
                       className="bandeau1"
                       fluid={edges.node.asset1.fluid}
@@ -97,8 +97,8 @@ export default () => {
                 to={{ opacity: 0.8 }}
                 from={{ opacity: 0 }}
               >
-                {props => (
-                  <div style={props}>
+                {fadeIn => (
+                  <div style={fadeIn}>
                     <Img
                       fluid={edges.node.asset2.fluid}
                       style={{ opacity: '0.8' }}
@@ -116,8 +116,8 @@ export default () => {
             to={{ opacity: 0.8 }}
             from={{ opacity: 0 }}
           >
-            {props => (
-              <div style={props}>
+            {fadeIn => (
+              <div style={fadeIn}>
                 <blockquote>
                   <h1 className="title has-text-white quote">
                     {edges.node.citation}
@@ -131,13 +131,13 @@ export default () => {
             to={{ opacity: 0.8 }}
             from={{ opacity: 0 }}
           >
-            {props => (
-              <div className="is-pulled-right" style={props}>
+            {fadeIn => (
+              <div className="is-pulled-right" style={fadeIn}>
                 <img
                   alt="signature"
                   src={signature}
                   style={{
-                    width: '170px',
+                    width: '340px',
                     height: 'auto',
                     opacity: '0.8',
                     paddingRight: '10px',
@@ -147,7 +147,7 @@ export default () => {
             )}
           </Spring>
         </div>
-        <animated.div style={props}>
+        <animated.div style={fadeIn}>
           <div className="hero-footer has-text-centered ">
             <i className="fas fa-angle-down fa-2x"></i>
           </div>

@@ -11,14 +11,6 @@
     "drome",
     "nature"
   ],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
-  "success_url": "/",
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-static"
-    }
-  ]
+  "repository": "https://github.com/theorevei/nicolasreveillard",
+  "success_url": "/"
 }
