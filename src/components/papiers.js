@@ -16,6 +16,7 @@ const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 export default () => {
+  
   // Modal for displaying the paints
   const [modal, setModal] = useState([])
   const toggleModal = (e, name) => {

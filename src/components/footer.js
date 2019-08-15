@@ -15,7 +15,8 @@ export default function footer() {
           <br></br>
           <br></br>
           <span>
-            Copyright © 2019 - Made by <a href="https://trvd.fr">Théo</a>
+            Copyright © 2019 - Made by{' '}
+            <a href="https://trvd.fr">https://trvd.fr</a>
           </span>
         </div>
       </footer>
