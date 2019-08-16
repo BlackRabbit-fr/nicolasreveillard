@@ -208,3 +208,11 @@ a.active {
 .presentation {
   color: white;
 }
+
+footer a {
+  color: #9b9a85;
+
+  &:hover {
+    color: white;
+  }
+}

@@ -7140,3 +7140,8 @@ a.active {
 
 .presentation {
   color: white; }
+
+footer a {
+  color: #9b9a85; }
+  footer a:hover {
+    color: white; }

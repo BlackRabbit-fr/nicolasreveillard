@@ -14,10 +14,10 @@ export default function footer() {
           </span>
           <br></br>
           <br></br>
-          <span>
-            Copyright © 2019 - Made by{' '}
-            <a href="https://trvd.fr">https://trvd.fr</a>
-          </span>
+          <span>Copyright © 2019 - Made by </span>
+          <a href="https://trvd.fr " target="_blank">
+            Théo
+          </a>
         </div>
       </footer>
     </div>
