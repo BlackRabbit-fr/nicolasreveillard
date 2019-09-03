@@ -9,7 +9,7 @@ export default function footer() {
             <i className="fas fa-envelope"></i>
             {'   '}
             <a href="mailto:nicolas.reveillard@laposte.net">
-              nicolas.reveillard@laposte.net
+              nirev@laposte.net
             </a>{' '}
           </span>
           <br></br>
