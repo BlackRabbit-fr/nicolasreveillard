@@ -62,6 +62,13 @@ export default () => {
               }
               title
             }
+            femmes {
+              fluid(resizingBehavior: SCALE) {
+                ...GatsbyContentfulFluid_tracedSVG
+                aspectRatio
+              }
+              title
+            }
             nusFeminins {
               fluid(resizingBehavior: SCALE, maxHeight: 700) {
                 ...GatsbyContentfulFluid_tracedSVG
