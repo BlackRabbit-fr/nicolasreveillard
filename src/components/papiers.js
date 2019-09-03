@@ -16,7 +16,6 @@ const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 export default () => {
-  
   // Modal for displaying the paints
   const [modal, setModal] = useState([])
   const toggleModal = (e, name) => {
@@ -63,14 +62,27 @@ export default () => {
               }
               title
             }
-            femmes {
-              fluid(resizingBehavior: SCALE, maxHeight: 600) {
+            nusFeminins {
+              fluid(resizingBehavior: SCALE, maxHeight: 700) {
                 ...GatsbyContentfulFluid_tracedSVG
                 aspectRatio
+              }
+              file {
+                url
               }
               title
             }
             nusMasculins {
+              fluid(resizingBehavior: SCALE, maxHeight: 700) {
+                ...GatsbyContentfulFluid_tracedSVG
+                aspectRatio
+              }
+              file {
+                url
+              }
+              title
+            }
+            visages {
               fluid(resizingBehavior: SCALE, maxHeight: 700) {
                 ...GatsbyContentfulFluid_tracedSVG
                 aspectRatio
@@ -119,6 +131,20 @@ export default () => {
       collages.push(i.fluid)
     })
   }
+
+  var femmes = []
+  {
+    edges.node.nusFeminins.map(i => {
+      femmes.push(i.fluid)
+    })
+  }
+
+  var visages = []
+  {
+    edges.node.visages.map(i => {
+      visages.push(i.fluid)
+    })
+  }
   return (
     <div>
       <section className="section is-small isSection" id="carnets">
@@ -163,10 +189,12 @@ export default () => {
                         alt={edges.node.carnets.title}
                       />
                       <div id="nusFeminins">
-                        <a>Nus Féminins</a>
+                        <a onClick={e => toggleModal(e, femmes)}>
+                          Nus Féminins
+                        </a>{' '}
                       </div>
                       <div id="visages">
-                        <a>Visages</a>
+                        <a onClick={e => toggleModal(e, visages)}>Visages</a>{' '}
                       </div>
                       <div id="paysages">
                         <a onClick={e => toggleModal(e, paysages)}>Paysages</a>{' '}
