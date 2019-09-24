@@ -9,14 +9,16 @@ export default function footer() {
             <i className="fas fa-envelope"></i>
             {'   '}
             <a href="mailto:nireve@laposte.net">nireve@laposte.net</a> <br></br>
-            Made by{' '}
-            <a href="https://trvd.fr" target="_blank">
-              Théo
-            </a>
+            <span className="content is-pulled-right">
+              Made by{' '}
+              <a href="https://trvd.fr" target="_blank">
+                Théo
+              </a>
+            </span>
           </span>
           <br></br>
           <br></br>
-          <span>Copyright © 2019 - Made by </span>
+          <span>Copyright © 2019</span>
         </div>
       </footer>
     </div>
