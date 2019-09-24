@@ -9,7 +9,7 @@ import signature from '../images/signature.svg'
 export default () => {
   // Make the arrowdown and the navbar disapear on scroll
   const [fadeIn, setFadeIn] = useSpring(() => ({ opacity: 1 }))
-  const [navFade, setNavFade] = useSpring(() => ({ opacity: 1 }))
+  const [navFade, setNavFade] = useSpring(() => ({ opacity: 0 }))
 
   useEffect(() => {
     var prevScrollpos = window.pageYOffset
