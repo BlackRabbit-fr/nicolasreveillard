@@ -10,13 +10,14 @@ export default function footer() {
             {'   '}
             <a href="mailto:nireve@laposte.net">nireve@laposte.net</a>
             <br></br>
+            <span className="content is-pulled-right has-text-white">
+              Made by{' '}
+              <a href="https://trvd.fr" target="_blank">
+                Théo
+              </a>
+            </span>
+            <br></br>
             Copyright © 2019
-          </span>
-          <span className="content is-pulled-right has-text-white">
-            Made by{' '}
-            <a href="https://trvd.fr" target="_blank">
-              Théo
-            </a>
           </span>
         </div>
       </footer>
