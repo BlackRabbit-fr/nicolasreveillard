@@ -19,6 +19,8 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Nicolas Réveillard',
+    siteUrl: 'https://nicolasreveillard.fr',
+    description: 'Artiste peintre à Valence dans la Drôme.',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
