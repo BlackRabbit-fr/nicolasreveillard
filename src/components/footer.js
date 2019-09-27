@@ -12,6 +12,9 @@ export default function footer() {
           </span>
           <br></br>
           <br></br>
+          Lien vers un ami dessinateur de BD :{' '}
+          <a href="https://www.fessenfer.fr/">Simon Penel</a>
+          <br></br>
           <span>Copyright © 2019 - Made by </span>
           <a href="https://trvd.fr" target="_blank">
             Théo

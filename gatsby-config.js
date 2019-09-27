@@ -21,7 +21,7 @@ module.exports = {
     title: 'Nicolas Réveillard',
     siteUrl: 'https://nicolasreveillard.fr',
     description:
-      "Site web de l'artiste peintre Nicolas Réveillard originaire de la Drôme. Ce site regroupe quelques-unes de ces oeuvres en format huiles sur toile et papier.",
+      "Site web de l'artiste peintre Nicolas Réveillard originaire de la Drôme. Ce site regroupe quelques-unes de ses oeuvres en format huiles sur toile et papier.",
     keywords: [
       'nicolas',
       'reveillard',
