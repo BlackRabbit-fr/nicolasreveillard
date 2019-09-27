@@ -23,6 +23,10 @@ class RootIndex extends React.Component {
         <Helmet title={siteTitle}>
           <meta name="description" content={siteDescription} />
           <meta name="keywords" content={keywords} />
+          <meta
+            name="google-site-verification"
+            content="MTd8pGxY0oxk-3M0fyXajZvWk83B9hBQVwFupRuHeoM"
+          />
         </Helmet>
         <Hero />
         <Papiers />
