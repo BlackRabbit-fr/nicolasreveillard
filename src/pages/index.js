@@ -12,10 +12,15 @@ import '../css/mystyles.css'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteDescription = get(
+      this,
+      'props.data.site.siteMetadata.description'
+    )
 
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
+        <meta name="description" content={siteDescription} />
         <Hero />
         <Papiers />
         <Huiles />
@@ -32,6 +37,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
   }
