@@ -1,6 +1,6 @@
 {
   "name": "nicolas-reveillard",
-  "description": "Artiste peintre originaire de la Drôme.",
+  "description": "Site de l'artiste peintre Nicolas Réveillard originaire de la Drôme. Ce site regroupe quelques-unes de ces oeuvres en format huiles sur toile et papier.",
   "version": "1.0.0",
   "author": "Théo Réveillard <reveillard.theo@gmail.com>",
   "dependencies": {
