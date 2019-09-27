@@ -20,7 +20,8 @@ module.exports = {
   siteMetadata: {
     title: 'Nicolas Réveillard',
     siteUrl: 'https://nicolasreveillard.fr',
-    description: 'Artiste peintre à Valence dans la Drôme.',
+    description:
+      "Site web de l'artiste peintre Nicolas Réveillard originaire de la Drôme. Ce site regroupe quelques-unes de ces oeuvres en format huiles sur toile et papier.",
     keywords: [
       'nicolas',
       'reveillard',
