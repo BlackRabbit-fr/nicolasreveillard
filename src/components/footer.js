@@ -14,7 +14,7 @@ export default function footer() {
           <br></br>
           Lien vers un ami dessinateur de BD :{' '}
           <a href="https://www.fessenfer.fr/" target="_blank">
-            Simon
+            Simon Penel
           </a>
           <br></br>
           <br></br>
