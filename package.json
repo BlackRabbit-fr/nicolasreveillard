@@ -33,10 +33,16 @@
     "prettier": "^1.17.0",
     "yargs-parser": "^13.0.0"
   },
-  "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
+  "homepage": "nicolasreveillard.fr",
   "keywords": [
-    "gatsby",
-    "contentful"
+    "nicolas",
+    "reveillard",
+    "aquarelle",
+    "encre",
+    "huile sur toile",
+    "paysages",
+    "drome",
+    "nature"
   ],
   "license": "MIT",
   "main": "n/a",

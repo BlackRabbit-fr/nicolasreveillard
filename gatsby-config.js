@@ -21,6 +21,16 @@ module.exports = {
     title: 'Nicolas Réveillard',
     siteUrl: 'https://nicolasreveillard.fr',
     description: 'Artiste peintre à Valence dans la Drôme.',
+    keywords: [
+      'nicolas',
+      'reveillard',
+      'aquarelle',
+      'encre',
+      'huile sur toile',
+      'paysages',
+      'drome',
+      'nature',
+    ],
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [

@@ -16,11 +16,13 @@ class RootIndex extends React.Component {
       this,
       'props.data.site.siteMetadata.description'
     )
+    const keywords = get(this, 'props.data.site.siteMetadata.keywords')
 
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle}>
           <meta name="description" content={siteDescription} />
+          <meta name="keywords" content={keywords} />
         </Helmet>
         <Hero />
         <Papiers />
@@ -39,6 +41,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        keywords
       }
     }
   }
