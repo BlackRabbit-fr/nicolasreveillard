@@ -8,14 +8,17 @@ export default function footer() {
           <span>
             <i className="fas fa-envelope"></i>
             {'   '}
-            <a href="mailto:nireve@laposte.net">nireve@laposte.net</a>{' '}
+            nireve@laposte.net{' '}
           </span>
           <br></br>
           <br></br>
           Lien vers un ami dessinateur de BD :{' '}
-          <a href="https://www.fessenfer.fr/">Simon Penel</a>
+          <a href="https://www.fessenfer.fr/" target="_blank">
+            Simon
+          </a>
           <br></br>
-          <span>Copyright © 2019 - Made by </span>
+          <br></br>
+          Copyright © 2019 - Réalisé par{' '}
           <a href="https://trvd.fr" target="_blank">
             Théo
           </a>
