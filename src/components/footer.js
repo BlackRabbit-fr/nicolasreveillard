@@ -5,6 +5,7 @@ export default function footer() {
     <div>
       <footer className="footer has-background-dark has-text-centered is-vcentered">
         <div className="content has-text-centered has-text-white">
+        <br></br>
           <span>
             <i className="fas fa-envelope"></i>
             {'   '}
@@ -22,6 +23,9 @@ export default function footer() {
           <a href="https://trvd.fr" target="_blank">
             Théo
           </a>
+          <br></br>
+          <br></br>
+          <br></br>
         </div>
       </footer>
     </div>
