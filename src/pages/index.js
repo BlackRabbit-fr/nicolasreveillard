@@ -8,6 +8,7 @@ import Huiles from '../components/huiles'
 import Layout from '../components/layout'
 import Footer from '../components/footer'
 import '../css/mystyles.css'
+import about from '../components/about'
 
 class RootIndex extends React.Component {
   render() {
@@ -29,6 +30,7 @@ class RootIndex extends React.Component {
           />
         </Helmet>
         <Hero />
+        <About />
         <Papiers />
         <Huiles />
         <Footer />

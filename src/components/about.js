@@ -4,7 +4,7 @@ export default function about() {
   return (
     <div>
       <section
-        className="section is-medium has-background-light isSection"
+        className="hero is-fullheight has-background-light isSection"
         id="a-propos"
       >
         <div className="columns is-vcentered  ">
